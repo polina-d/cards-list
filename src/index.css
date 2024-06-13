@@ -1,0 +1,97 @@
+:root {
+    font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+    line-height: 1.5;
+    font-weight: 400;
+
+    font-synthesis: none;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+
+    --white: #ffffff;
+    --black: #1a1a1a;
+    --red: #ff3044;
+    --blue: #2688eb;
+    --darkGrey: #949494;
+    --lightGrey: #efefef;
+}
+
+body {
+    margin: 0;
+    display: flex;
+    place-items: center;
+    min-width: 320px;
+    min-height: 100vh;
+    background-color: var(--lightGrey);
+}
+
+p, h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+}
+
+p {
+    font-size: var(--text2);
+}
+
+h3 {
+    font-size: var(--text1);
+    font-weight: normal;
+    line-height: 1.1;
+}
+
+h4 {
+    font-size: var(--text0);
+    font-weight: normal;
+    line-height: 1.1;
+}
+
+button {
+    border-radius: 8px;
+    border: 1px solid transparent;
+    padding: 0.6em 1.2em;
+    font-size: 1em;
+    font-weight: 500;
+    font-family: inherit;
+    background-color: var(--blue);
+    color: var(--white);
+    cursor: pointer;
+    transition: border-color 0.25s;
+}
+
+button:hover {
+    opacity: 0.8
+}
+
+button:active {
+    opacity: 0.9
+}
+
+@media screen and (max-width: 600px) {
+    :root {
+        --text0: 6vw;
+        --text1: 10vw;
+        --text2: 4vw;
+        --text3: 2vw;
+        --margin1: 4vw;
+        --margin2: 2vw;
+        --margin3: 20vw;
+        --logoSize: 15vw;
+        --iconSize: 8vw;
+        --sizePreloader: 20vw;
+    }
+}
+
+@media screen and (min-width: 600px) {
+    :root {
+        --text0: 24px;
+        --text1: 40px;
+        --text2: 16px;
+        --text3: 8px;
+        --margin1: 16px;
+        --margin2: 8px;
+        --margin3: 80px;
+        --logoSize: 60px;
+        --iconSize: 24px;
+        --sizePreloader: 80px;
+    }
+}
