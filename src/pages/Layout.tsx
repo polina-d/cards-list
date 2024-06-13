@@ -9,7 +9,7 @@ export const Layout = observer(() => {
 
     useEffect(() => {
         getCards();
-        setTimeout(() => setIsLoading(false), 0);
+        setTimeout(() => setIsLoading(false), 3000);
     }, [getCards]);
 
     return isLoading ? <Loading /> : <CardsList />;

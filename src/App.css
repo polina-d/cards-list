@@ -19,6 +19,7 @@
 .button--icon {
     background-color: transparent;
     color: var(--blue);
+    padding: 0;
 }
 
 .card-list__footer {
@@ -31,11 +32,12 @@
 
 .card__wrapper {
     border-radius: 20px;
-    width: 100%;
+    width: auto;
     padding: var(--margin1);
     background-color: var(--white);
     margin-bottom: var(--margin1);
-    min-width: 400px;
+    max-width: 100vw;
+    min-width: 300px;
 }
 
 .card__header {

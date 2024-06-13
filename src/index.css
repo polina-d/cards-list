@@ -1,19 +1,23 @@
-:root {
-    font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-    line-height: 1.5;
+@font-face {
+    font-family: 'SegoeUIRegular';
+    src: local('SegoeUIRegular'), url(./assets/fonts/SegoeUIRegular.ttf) format("truetype");
+}
+
+@font-face {
+    font-family: 'SegoeUIRegular';
     font-weight: 400;
+    src: local('SegoeUIRegular'), url(./assets/fonts/SegoeUIRegular.ttf) format("truetype");
+}
 
-    font-synthesis: none;
-    text-rendering: optimizeLegibility;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
+@font-face {
+    font-family: 'SegoeUIBold';
+    font-weight: 900;
+    src: local('SegoeUIBold'), url(./assets/fonts/SegoeUIBold.ttf) format("truetype");
+}
 
-    --white: #ffffff;
-    --black: #1a1a1a;
-    --red: #ff3044;
-    --blue: #2688eb;
-    --darkGrey: #949494;
-    --lightGrey: #efefef;
+html {
+    height: 100%;
+    width: 100vw;
 }
 
 body {
@@ -23,6 +27,19 @@ body {
     min-width: 320px;
     min-height: 100vh;
     background-color: var(--lightGrey);
+}
+
+:root {
+    font-family: SegoeUIRegular, sans-serif;
+    line-height: 1.5;
+    font-weight: 400;
+
+    --white: #ffffff;
+    --black: #1a1a1a;
+    --red: #ff3044;
+    --blue: #2688eb;
+    --darkGrey: #949494;
+    --lightGrey: #efefef;
 }
 
 p, h1, h2, h3, h4, h5, h6 {
@@ -35,14 +52,14 @@ p {
 
 h3 {
     font-size: var(--text1);
-    font-weight: normal;
     line-height: 1.1;
+    font-weight: normal;
 }
 
 h4 {
     font-size: var(--text0);
-    font-weight: normal;
     line-height: 1.1;
+    font-weight: normal;
 }
 
 button {
@@ -51,7 +68,6 @@ button {
     padding: 0.6em 1.2em;
     font-size: 1em;
     font-weight: 500;
-    font-family: inherit;
     background-color: var(--blue);
     color: var(--white);
     cursor: pointer;

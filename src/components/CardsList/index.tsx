@@ -12,7 +12,7 @@ export const CardsList = observer(() => {
         if (endOfPageRef.current) {
             onVisible(endOfPageRef.current, addCards);
         }
-    }, [cards?.length]);
+    }, [addCards, cards?.length]);
 
     const onVisible = (element: Element, callback: () => void) => {
         if (element) {
@@ -29,11 +29,9 @@ export const CardsList = observer(() => {
     return (
         <>
             <Header title={'Управление картами'} />
-            <div style={{paddingTop: '80px'}}>
+            <div style={{paddingTop: '80px',maxWidth: '600px'}}>
                 {cards?.map((card) => (
-                    <div key={card?.company?.companyId}>
-                        <Card card={card} />
-                    </div>
+                        <Card card={card}  key={card?.company?.companyId}/>
                 ))}
             </div>
             <div ref={isCardsLength ? endOfPageRef : undefined} className={'card-list__footer'}>
